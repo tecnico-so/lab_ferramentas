@@ -150,6 +150,72 @@ q
 ./test < tree2.txt
 ```
 
+## 6 - Utilização da ferramenta make
+O `make` é uma ferramenta frequentemente utilizada para compilar software. Em projetos de qualquer dimensão, a utilização do `make` oferece uma forma unificada e conhecida de compilar o software em questão.
+
+A documentação completa da ferramenta make pode ser consultada no link [http://www.gnu.org/software/make/manual/make.html](http://www.gnu.org/software/make/manual/make.html).
+
+O `make` necessita de um ficheiro, habitualmente chamado `Makefile`, que descreve uma série de alvos (*targets*) e respetivas dependências.
+
+Normalmente, tanto os alvos como as dependências são ficheiros: os alvos são ficheiros que se pretendem gerar, enquanto que as dependências são ficheiros de código-fonte. Note que um alvo pode ser uma dependência de outro alvo, sendo estes casos resolvidos automaticamente.
+
+Para além dos alvos e das suas dependências, o ficheiro `Makefile` deve incluir também os comandos (receitas) que permitem gerar os alvos a partir das dependências. Os comandos das receitas têm, obrigatoriamente, de estar numa linha que começa com um *tab*. Ao conjunto de alvo, dependências e receita chama-se `regra`, e a sua estrutura geral é:
+
+```make
+alvo1: dependencia1 dependencia2 dependencia3...
+comando1
+comando2
+...
+```
+
+O `make` é, em particular, útil para compilar software pois é capaz de, a partir das dependências descritas na `Makefile`, determinar quais os ficheiros (alvo) que estão desatualizados e precisam de ser recompilados. Isto torna-se muito vantajoso durante o desenvolvimento de um projeto de dimensão considerável pois poupa tempo de compilação.
+
+Quando as dependências são mais recentes do que os alvos, ou quando os alvos não existem, o `make` volta a executar as receitas. Deste modo, quando um ficheiro fonte é atualizado, basta executar `make` para que todos os passos necessários até à geração do executável sejam realizados.
+
+A Figura 1 ilustra a geração de um programa genérico `MyProg` a partir do ficheiro `MyProg.c` e dos ficheiros `util.c` e `util.h`.
+
+![MAKE](img/make.png)  
+
+1. Faça o paralelo entre o exemplo genérico descrito na Figura 1 e os comandos executados anteriormente no ponto 5.1.
+2. O arquivo `bst.zip` já inclui um ficheiro `Makefile`. Analise o seu conteúdo e identifique quais as regras existentes. Notar o uso de variáveis, com atribuição de valor: ``CFLAGS = -g -Wall -std=gnu99`` e acesso ao seu conteúdo: ``$(CFLAGS)``
+3. Execute os comandos seguintes para simular uma alteração em `test.c` e corra o programa `make` (o qual seguirá as instruções contidas no ficheiro `Makefile`). Interprete o que acontece.
+
+```make
+touch test.c
+make
+```
+
+4. Execute os comandos seguintes e interprete o que acontece.
+
+```make
+make
+touch bst.h
+make
+```
+
+5. Notar que algumas regras não possuem dependências. Verifique o que acontece quando corre os
+comandos seguintes.
+
+
+```make
+make clean
+make
+make run1
+```
+
+6. Experimente agora correr os comandos abaixo. Qual a razão para a invocação do `make` não apagar os artefactos de compilação como anteriormente? Estude o conceito de *phony target* e tente usá-lo para evitar que o problema anterior se verifique.
+
+```make
+touch clean
+make clean
+```
+
+A ferramenta `make` é muito poderosa, sugerindo-se que explore melhor as suas capacidades lendo a respectiva documentação (ver *link* indicado no início desta secção). Salienta-se, em particular, que existem mecanismos que simplificam a escrita de *makefiles*, recorrendo ao uso de regras implícitas. Pode obter mais informação em: [http://www.gnu.org/software/make/manual/make.html#Implicit-Rules](http://www.gnu.org/software/make/manual/make.html#Implicit-Rules)
+
+
+**NOTA IMPORTANTE:** Todas as entregas associadas à realização do projecto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
+
+
 ## Conclusão
 
 ...
