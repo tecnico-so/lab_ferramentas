@@ -180,14 +180,14 @@ A Figura 1 ilustra a geração de um programa genérico `MyProg` a partir do fic
 2. O arquivo `bst.zip` já inclui um ficheiro `Makefile`. Analise o seu conteúdo e identifique quais as regras existentes. Notar o uso de variáveis, com atribuição de valor: ``CFLAGS = -g -Wall -std=gnu99`` e acesso ao seu conteúdo: ``$(CFLAGS)``
 3. Execute os comandos seguintes para simular uma alteração em `test.c` e corra o programa `make` (o qual seguirá as instruções contidas no ficheiro `Makefile`). Interprete o que acontece.
 
-```make
+```sh
 touch test.c
 make
 ```
 
 4. Execute os comandos seguintes e interprete o que acontece.
 
-```make
+```sh
 make
 touch bst.h
 make
@@ -197,7 +197,7 @@ make
 comandos seguintes.
 
 
-```make
+```sh
 make clean
 make
 make run1
@@ -205,7 +205,7 @@ make run1
 
 6. Experimente agora correr os comandos abaixo. Qual a razão para a invocação do `make` não apagar os artefactos de compilação como anteriormente? Estude o conceito de *phony target* e tente usá-lo para evitar que o problema anterior se verifique.
 
-```make
+```sh
 touch clean
 make clean
 ```
