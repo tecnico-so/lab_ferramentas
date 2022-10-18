@@ -102,6 +102,53 @@ cat /etc/passwd | grep root | cut -d : -f 7
 
 Estas redireções são feitas com recurso a *pipes*, conceito que será abordado mais a fundo durante as aulas teóricas.
 
+## 4 - Análise do programa fornecido
+
+Analise os ficheiros extraídos do arquivo `bst.zip` usando o editor de texto da sua preferência (e.g., `vim`, `emacs`, `nano`, `gedit`, `Sublime`, `lime`, `VSCode`).
+
+O arquivo contém os ficheiros `bst.c` e `bst.h` que implementam uma árvore de procura binária (*Binary Search Tree* – BST). Os elementos da árvore são representados por uma estrutura de dados que está declarada em `bst.h`. Na versão fornecida, os dados mantidos em cada nó da árvore consistem numa simples cadeia de caracteres (*string*).
+
+O arquivo contém também o programa test.c que permite testar a biblioteca `bst`.
+
+1. Identifique as diferentes operações disponibilizadas em `bst.c`.
+2. Analise o programa `test.c` e identifique que comandos podem ser usados e qual a sua sintaxe.
+
+## 5 - Geração e teste do programa `test`
+
+1. Gere o programa `test` usando os seguintes comandos
+
+```sh
+gcc -c bst.c -o bst.o
+gcc -c test.c -o test.o
+gcc test.o bst.o -o test
+```
+
+2. Execute o programa `test` e introduza os comandos abaixo. Analise os resultados obtidos.
+
+```sh
+./test
+
+d
+a 20
+a 10
+a 30
+a 40
+a 35
+a 22
+a 5
+a 37
+s 27
+s 5
+r 35
+q
+```
+
+3. Execute os comandos abaixo e, analisando o conteúdo dos ficheiros `tree1.txt` e `tree2.txt`, interprete os resultados obtidos.
+
+```sh
+./test < tree1.txt
+./test < tree2.txt
+```
 
 ## Conclusão
 
