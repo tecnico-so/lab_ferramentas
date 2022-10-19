@@ -9,6 +9,18 @@ No final deste guião, deverá ser capaz de:
 - Estar familiarizado com o ambiente UNIX.
 - Utilizar a ferramenta `make` para gerar software.
 
+*Nota: Os tutoriais práticos de SO consistem num conjunto de exercícios práticos que permitem aos alunos
+familiarizarem-se com um determinado tema que será necessário para resolver os projetos da disciplina.
+Os tutoriais podem ser resolvidos individualmente ou em grupo. A sua resolução é recomendada mas não
+obrigatória. Não são avaliados.
+Cada tutorial pressupõe que os exercícios são realizados numa interface de linha de comandos (shell) de
+um sistema Unix/Linux ou equivalente. Assume também que os alunos já resolveram os tutoriais
+anteriores.*
+
+## Requisitos
+
+- Sistema operativo Linux 20.04 LTS (se não o tiverem disponível no vosso computador pessoal, podem utilizar os computadores do laboratório);
+
 ## 1 - Contacto com o ambiente UNIX
 
 1. Crie um diretório no seu computador e descarregue o arquivo `bst.zip` (binary search tree) que está disponível na página da disciplina (no fénix), na secção “Laboratórios”. Para extrair os ficheiros contidos no arquivo, use o comando:
@@ -215,11 +227,6 @@ A ferramenta `make` é muito poderosa, sugerindo-se que explore melhor as suas c
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projecto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
 
-
-## Conclusão
-
-...
-
 ## Agradecimentos
 
-- ...
+- Equipa de docentes de Sistemas Operativos
