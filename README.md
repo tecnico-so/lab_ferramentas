@@ -23,11 +23,8 @@ anteriores.*
 
 ## 1 - Contacto com o ambiente UNIX
 
-1. Crie um diretório no seu computador e descarregue o arquivo `bst.zip` (binary search tree) que está disponível na página da disciplina (no fénix), na secção “Laboratórios”. Para extrair os ficheiros contidos no arquivo, use o comando:
+1. Crie um diretório no seu computador e descarregue os ficheiros presentes no diretório [bst](https://github.com/tecnico-so/lab_ferramentas/bst) (binary search tree) que está disponível neste respositório.
 
-```sh
-unzip bst.zip
-```
 
 2. Relembre o que fazem os comandos básicos como, por exemplo, `cd`, `ls`, `cat`, `cp`, `mv`, `rm`, `mkdir` e `rmdir`.
 Recorde também que a generalidade dos comandos aceitam *switches* (também chamados
