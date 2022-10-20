@@ -220,6 +220,10 @@ make clean
 
 A ferramenta `make` é muito poderosa, sugerindo-se que explore melhor as suas capacidades lendo a respectiva documentação (ver *link* indicado no início desta secção). Salienta-se, em particular, que existem mecanismos que simplificam a escrita de *makefiles*, recorrendo ao uso de regras implícitas. Pode obter mais informação em: [http://www.gnu.org/software/make/manual/make.html#Implicit-Rules](http://www.gnu.org/software/make/manual/make.html#Implicit-Rules). Existem regras implícitas para a compilação de artefactos em C, o que é bastante útil nesta UC.
 
+## 7. Extra
+
+Se quiser explorar e exercitar mais aprofundadamente as ferramentas de compilação que vamos utilizar ao longo da UC, explore o [guião extra](advanced_makefile.md)
+
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projecto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
 

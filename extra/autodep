@@ -1,0 +1,2 @@
+bst.o: src/bst.c include/bst.h
+test.o: test/test.c include/bst.h
