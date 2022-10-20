@@ -29,14 +29,16 @@ Estes warnings têm de ser ativados explicitamente. Com a flag `-Werror`, eles s
  - `-Wextra`: ativa mais warnings (continuam sem ser todos)
  - `-Wcast-align`: quando é feito um cast que altera os requisitos de alinhamento
  - `-Wconversion`: quando uma conversão pode alterar um valor.
-     Exemplo:
 ```c
 int main() {
     unsigned int x = 2 << 17;
     unsigned short y = x;
     return 0;
-}```
-    Compilar com `clang -Wconversion test.c` emite um warning com:
+}
+```
+
+Compilar com `clang -Wconversion test.c` emite um warning com:
+
 ```
 % clang -Wconversion test.c
 test.c:3:24: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned short' [-Wimplicit-int-conversion]
@@ -50,7 +52,6 @@ test.c:3:24: warning: implicit conversion loses integer precision: 'unsigned int
  - `-Wformat=2`: analiza as format strings de funções tipo `printf`, verificando que os elementos e os descriptores de formatação estão bem colocados.
  - `-Wnull-dereference`: detecta algumas instâncias de derreferências de null pointers.
  - `-Wshadow`: detecta quanto se está a renomear uma variável.
-     Exemplo:
 ```c
 int f(int x) {
     int res = 0;
@@ -68,7 +69,9 @@ int main() {
     f(42);
 }
 ```
-    Compilar com `clang -Wshadow test.c` emite um warning com:
+
+Compilar com `clang -Wshadow test.c` emite um warning com:
+    
 ```
 % clang -Wshadow test.c
 test.c:5:17: warning: declaration shadows a local variable [-Wshadow]
@@ -110,7 +113,9 @@ int main() {
 }
 
 ```
-    Compilar com `clang -Wswitch-enum test.c` emite um warning com:
+
+Compilar com `clang -Wswitch-enum test.c` emite um warning com:
+    
 ```
 % clang test.c
 test.c:9:13: warning: enumeration value 'STUDY' not handled in switch [-Wswitch]
@@ -137,7 +142,9 @@ int main() {
     return -1;
 }
 ```
-    Compilar com `clang -Wunreachable-code test.c` emite um warning com:
+
+Compilar com `clang -Wunreachable-code test.c` emite um warning com:
+    
 ```
 % clang -Wunreachable-code test.c
 test.c:11:5: warning: code will never be executed [-Wunreachable-code]
@@ -145,6 +152,7 @@ test.c:11:5: warning: code will never be executed [-Wunreachable-code]
     ^
 1 warning generated.
 ```
+
  - `-Wunused`: quando um elemento de código não é utilizado.
 ```c
 int sum(int a, int b) {
@@ -157,14 +165,15 @@ int main() {
     return 0;
 }
 ```
-    Compilar com `clang -Wunused test.c` emite um warning com:
+
+Compilar com `clang -Wunused test.c` emite um warning com:
+    
 ```
 % clang -Wunused test.c
 test.c:2:9: warning: unused variable 'sum' [-Wunused-variable]
     int sum = a + b;
         ^
 1 warning generated.
-
 ```
 
 Se estiverem curiosos, podem consultar a [lista completa de warnings do Clang](https://clang.llvm.org/docs/DiagnosticsReference.html#wundef). É de notar que há warnings que podem não compreender à partida a sua utilidade ou sequer o que estão de facto a fazer. Isto é natural, mas significa que a sua utilização é ainda mais importante: estão a salvaguardar-vos de subtilezas e detalhes da linguagem que não conhecem.
