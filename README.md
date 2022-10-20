@@ -95,6 +95,7 @@ echo Hello World
 echo Hello World > my_stdout.txt
 echo Hello again >> my_stdout.txt
 echo Goodbye > my_stdout.txt
+cat my_stdout.txt nonexistent_file
 cat my_stdout.txt nonexistent_file 2> my_stderr.txt
 cat my_stdout.txt nonexistent_file &> my_stdout_and_stderr.txt
 cat < my_stdout.txt
@@ -171,9 +172,9 @@ Para além dos alvos e das suas dependências, o ficheiro `Makefile` deve inclui
 
 ```make
 alvo1: dependencia1 dependencia2 dependencia3...
-comando1
-comando2
-...
+	comando1
+	comando2
+	...
 ```
 
 O `make` é, em particular, útil para compilar software pois é capaz de, a partir das dependências descritas na `Makefile`, determinar quais os ficheiros (alvo) que estão desatualizados e precisam de ser recompilados. Isto torna-se muito vantajoso durante o desenvolvimento de um projeto de dimensão considerável pois poupa tempo de compilação.
