@@ -1,6 +1,6 @@
 # Guião 1: Ferramentas de Desenvolvimento
 
-![IST](img/IST_DEI.png)  
+![IST](img/IST_DEI.png)
 
 ## Objectivos
 
@@ -21,20 +21,19 @@ anteriores.*
 
 - Sistema operativo Linux 20.04 LTS (se não o tiverem disponível no vosso computador pessoal, podem utilizar os computadores do laboratório);
 
-## 1 - Contacto com o ambiente UNIX
+## 1. Contacto com o ambiente UNIX
 
-1. Crie um diretório no seu computador e descarregue os ficheiros presentes no diretório [bst](https://github.com/tecnico-so/lab_ferramentas/tree/main/bst) (binary search tree) que está disponível neste respositório.
-
+1. Clone este repositório, usando o git: `git clone git@github.com:tecnico-so/lab_ferramentas.git`.
 
 2. Relembre o que fazem os comandos básicos como, por exemplo, `cd`, `ls`, `cat`, `cp`, `mv`, `rm`, `mkdir` e `rmdir`.
-Recorde também que a generalidade dos comandos aceitam *switches* (também chamados
-argumentos, opções ou *flags*) que modificam o seu comportamento. Compare, por exemplo, o
+Recorde também que a generalidade dos comandos aceitam *flags* (também chamados
+argumentos, opções ou *switches*) que modificam o seu comportamento. Compare, por exemplo, o
 comportamento do comando `ls`, sem argumentos, com o comando `ls -l`.
 
 Na secção seguinte detalha-se como pode obter ajuda ou informações sobre um certo comando em
 ambientes UNIX.
 
-## 2 - Utilização do manual
+## 2. Utilização do manual
 
 1. Pode aceder a informação detalhada sobre comandos de sistema, programas e funções da linguagem C, usando o comando `man` (abreviatura de "manual"), sob a forma das chamadas *manpages*.
 
@@ -83,7 +82,7 @@ Experimente também usar o *switch* `--help` ou consultar a manpage dos seguinte
 4. O uso do manual é especialmente útil para obter informação sobre as funções do C e identificar os valores devolvidos – notar a secção `RETURN VALUE`. Este aspeto é muito importante, pois nenhum programa deve chamar uma função e, no retorno, ignorar se ocorreu alguma situação de erro durante a execução da função. Como regra, antes de usar uma função, os alunos devem estudar nas *manpages*  as diversas situações de erro que podem ocorrer e assegurar que o
 programa as trata devidamente (analisando o retorno da função).
 
-## 3 - Redireção dos canais de entrada/saída
+## 3. Redireção dos canais de entrada/saída
 1. Em ambientes UNIX, cada processo tem três canais fundamentais de entrada/saída: *stdin*, *stdout* e *stderr*.
 
 - O *stdin* (“standard input”) representa o dispositivo de entrada de um programa - tipicamente o teclado;
@@ -111,18 +110,18 @@ cat /etc/passwd | grep root | cut -d : -f 7
 
 Estas redireções são feitas com recurso a *pipes*, conceito que será abordado mais a fundo durante as aulas teóricas.
 
-## 4 - Análise do programa fornecido
+## 4. Análise do programa fornecido
 
-Analise os ficheiros extraídos do arquivo `bst.zip` usando o editor de texto da sua preferência (e.g., `vim`, `emacs`, `nano`, `gedit`, `Sublime`, `lime`, `VSCode`).
+Analise os ficheiros presentes na directoria `src` usando o editor de texto da sua preferência (e.g., `vim`, `emacs`, `nano`, `gedit`, `Sublime`, `lime`, `VSCode`).
 
-O arquivo contém os ficheiros `bst.c` e `bst.h` que implementam uma árvore de procura binária (*Binary Search Tree* – BST). Os elementos da árvore são representados por uma estrutura de dados que está declarada em `bst.h`. Na versão fornecida, os dados mantidos em cada nó da árvore consistem numa simples cadeia de caracteres (*string*).
+A directoria contém os ficheiros `bst.c` e `bst.h` que implementam uma árvore de procura binária (*Binary Search Tree* – BST). Os elementos da árvore são representados por uma estrutura de dados que está declarada em `bst.h`. Na versão fornecida, os dados mantidos em cada nó da árvore consistem numa simples cadeia de caracteres (*string*).
 
-O arquivo contém também o programa test.c que permite testar a biblioteca `bst`.
+A directoria contém também o programa test.c que permite testar a biblioteca `bst`.
 
 1. Identifique as diferentes operações disponibilizadas em `bst.c`.
 2. Analise o programa `test.c` e identifique que comandos podem ser usados e qual a sua sintaxe.
 
-## 5 - Geração e teste do programa `test`
+## 5. Geração e teste do programa `test`
 
 1. Gere o programa `test` usando os seguintes comandos
 
@@ -159,7 +158,7 @@ q
 ./test < tree2.txt
 ```
 
-## 6 - Utilização da ferramenta make
+## 6. Utilização da ferramenta make
 O `make` é uma ferramenta frequentemente utilizada para compilar software. Em projetos de qualquer dimensão, a utilização do `make` oferece uma forma unificada e conhecida de compilar o software em questão.
 
 A documentação completa da ferramenta make pode ser consultada no link [http://www.gnu.org/software/make/manual/make.html](http://www.gnu.org/software/make/manual/make.html).
@@ -183,7 +182,7 @@ Quando as dependências são mais recentes do que os alvos, ou quando os alvos n
 
 A Figura 1 ilustra a geração de um programa genérico `MyProg` a partir do ficheiro `MyProg.c` e dos ficheiros `util.c` e `util.h`.
 
-![MAKE](img/make.png)  
+![MAKE](img/make.png)
 
 1. Faça o paralelo entre o exemplo genérico descrito na Figura 1 e os comandos executados anteriormente no ponto 5.1.
 2. O arquivo `bst.zip` já inclui um ficheiro `Makefile`. Analise o seu conteúdo e identifique quais as regras existentes. Notar o uso de variáveis, com atribuição de valor: ``CFLAGS = -g -Wall -std=gnu99`` e acesso ao seu conteúdo: ``$(CFLAGS)``
@@ -219,7 +218,7 @@ touch clean
 make clean
 ```
 
-A ferramenta `make` é muito poderosa, sugerindo-se que explore melhor as suas capacidades lendo a respectiva documentação (ver *link* indicado no início desta secção). Salienta-se, em particular, que existem mecanismos que simplificam a escrita de *makefiles*, recorrendo ao uso de regras implícitas. Pode obter mais informação em: [http://www.gnu.org/software/make/manual/make.html#Implicit-Rules](http://www.gnu.org/software/make/manual/make.html#Implicit-Rules)
+A ferramenta `make` é muito poderosa, sugerindo-se que explore melhor as suas capacidades lendo a respectiva documentação (ver *link* indicado no início desta secção). Salienta-se, em particular, que existem mecanismos que simplificam a escrita de *makefiles*, recorrendo ao uso de regras implícitas. Pode obter mais informação em: [http://www.gnu.org/software/make/manual/make.html#Implicit-Rules](http://www.gnu.org/software/make/manual/make.html#Implicit-Rules). Existem regras implícitas para a compilação de artefactos em C, o que é bastante útil nesta UC.
 
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projecto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
