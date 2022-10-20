@@ -185,7 +185,7 @@ A Figura 1 ilustra a geração de um programa genérico `MyProg` a partir do fic
 ![MAKE](img/make.png)
 
 1. Faça o paralelo entre o exemplo genérico descrito na Figura 1 e os comandos executados anteriormente no ponto 5.1.
-2. O arquivo `bst.zip` já inclui um ficheiro `Makefile`. Analise o seu conteúdo e identifique quais as regras existentes. Notar o uso de variáveis, com atribuição de valor: ``CFLAGS = -g -Wall -std=gnu99`` e acesso ao seu conteúdo: ``$(CFLAGS)``
+2. O repositório já inclui um ficheiro `Makefile`. Analise o seu conteúdo e identifique quais as regras existentes. Notar o uso de variáveis, com atribuição de valor: ``CFLAGS = -g -Wall -std=c17`` e acesso ao seu conteúdo: ``$(CFLAGS)``
 3. Execute os comandos seguintes para simular uma alteração em `test.c` e corra o programa `make` (o qual seguirá as instruções contidas no ficheiro `Makefile`). Interprete o que acontece.
 
 ```sh

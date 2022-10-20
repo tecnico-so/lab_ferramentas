@@ -1,4 +1,4 @@
-CFLAGS = -g -Wall -std=c11
+CFLAGS = -g -Wall -std=c17
 
 test: test.o bst.o
 	gcc $(CFLAGS) test.o bst.o -o test
