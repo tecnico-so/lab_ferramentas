@@ -1,13 +1,13 @@
 /* bst.h */
 
-#define DATA_SIZE  20
+#define DATA_SIZE 20
 
 typedef struct node {
-    long key;
-    char data[DATA_SIZE];
+  long key;
+  char data[DATA_SIZE];
 
-    struct node* left;
-    struct node* right;
+  struct node *left;
+  struct node *right;
 } node;
 
 node *search(node *p, long key);
