@@ -227,7 +227,3 @@ Se quiser explorar e exercitar mais aprofundadamente as ferramentas de compilaç
 
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projecto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
-
-## Agradecimentos
-
-- Equipa de docentes de Sistemas Operativos
