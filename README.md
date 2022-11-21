@@ -23,7 +23,7 @@ anteriores.*
 
 ## 1. Contacto com o ambiente UNIX
 
-1. Clone este repositório, usando o git: `git clone git@github.com:tecnico-so/lab_ferramentas.git`.
+1. Clone este repositório, usando o git: `git clone https://github.com/tecnico-so/lab_ferramentas.git`.
 
 2. Relembre o que fazem os comandos básicos como, por exemplo, `cd`, `ls`, `cat`, `cp`, `mv`, `rm`, `mkdir` e `rmdir`.
 Recorde também que a generalidade dos comandos aceitam *flags* (também chamados
