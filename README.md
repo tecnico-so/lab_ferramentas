@@ -53,12 +53,16 @@ Para a cadeira de Sistemas Operativos, as secções mais relevantes são:
 Isto é relevante pois existem comandos/funções com o mesmo nome que têm propósito e funcionamento diferentes.  
 Por exemplo, isso observa-se para o comando `printf` que está na secção 1 e a função `printf` da linguagem C que está na secção 3.
 Ao invocar o manual, pode especificar a que secção pretende aceder, indicando o seu número antes do nome.
-Experimente os seguintes comandos:
+Experimente os seguintes comandos[^footnote-man]:
 
 ```sh
 man printf
 man 3 printf
 ```
+
+[^footnote-man]: Em alguns sistemas os manuais podem não estar completos.
+Para instalar todos os manuais, execute o seguinte comando:
+`sudo apt install man-db manpages-posix manpages-dev manpages-posix-dev`
 
 3. O manual também contém informação sobre programas/ferramentas.
 Por exemplo, para consultar a *manpage* do comando `zip`:
@@ -74,9 +78,9 @@ do *switch* `--help`, que é geralmente suportado:
 zip --help
 ```
 
-Experimente também usar o *switch* `--help` ou consultar a *manpage* dos seguintes programas: `gdb`, `gcc` e `make`[^footnote1].
+Experimente também usar o *switch* `--help` ou consultar a *manpage* dos seguintes programas: `gdb`, `gcc` e `make`[^footnote-make].
 
-[^footnote1]: No caso de programas como o (GNU) `make`, a sua documentação completa está apenas disponível como um manual *Texinfo*, acessível pelo comando `info`.
+[^footnote-make]: No caso de programas como o (GNU) `make`, a sua documentação completa está apenas disponível como um manual *Texinfo*, acessível pelo comando `info`.
 Se quiser saber, por exemplo, como escrever um `Makefile`, a *manpage* do `make` recomenda consultar o manual completo com `info make`.
 
 4. O uso do manual é especialmente útil para obter informação sobre as funções do C e identificar os valores devolvidos – notar a secção `RETURN VALUE`.
