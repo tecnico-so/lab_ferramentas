@@ -252,3 +252,7 @@ Existem regras implícitas para a compilação de artefactos em C, o que é bast
 Se quiser exercitar mais aprofundadamente as ferramentas de compilação que vamos utilizar, explore o [guião extra](advanced_makefile.md).
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projeto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
+
+----
+
+Contactos para sugestões/correções: [LEIC-Alameda](mailto:leic-so-alameda@disciplinas.tecnico.ulisboa.pt), [LEIC-Tagus](mailto:leic-so-tagus@disciplinas.tecnico.ulisboa.pt), [LETI](mailto:leti-so-tagus@disciplinas.tecnico.ulisboa.pt)
