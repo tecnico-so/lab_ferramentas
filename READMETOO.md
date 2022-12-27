@@ -2,26 +2,14 @@
 
 Este guião contém exercícios extra para que se familiarizem com ferramentas de compilação de C.
 
-## 1. Formatadores de Código
+## 1. _Makefiles_ avançados
 
-A formatação de código é um assunto contencioso.
-O código bem formatado é extremamente importante (a maioria do código é lido mais vezes do que é escrito) e uma formatação adequada e uniforme facilita a compreensão.
-Contudo, o que constitui _formatação adequada_ é um tópico que facilmente degenera numa discussão de gosto pessoal e distrai do objetivo principal (o desenvolvimento).
-Para além disso, é difícil e trabalhoso manter qualquer tipo de formatação de forma consistente, especialmente quando a dimensão do projeto vai aumentando.
+Como descrito no guião principal, o `make` é uma ferramenta fulcral para acelerar o desenvolvimento de código em `C`.
+Explore na directoria [`extra`](extra/) o `Makefile` apresentado.
+Esta diretoria tem uma versão alterada do código da BST presente em [`src`](src/).
 
-Para colmatar este problema, existem formatadores automáticos de código.
-Por exemplo, em Python existe o [`autopep8`](https://pypi.org/project/autopep8/), em Rust o [`rustfmt`](https://github.com/rust-lang/rustfmt) e em Go o `go fmt`.  
-Para C (e C++) existe o [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html).
-
-Para correr o `clang-format`, usar o comando:
-
-```sh
-clang-format -i <source_files>
-```
-
-Para configurar o estilo de formatação, existe o ficheiro `.clang-format`.
-O comando `clang-format` deteta a presença deste ficheiro e utiliza-o como referência.
-Nos projetos, será fornecido com o código base um ficheiro `.clang-format` para uniformizar o estilo a usar.
+Utilize o `make` para corrigir alguns dos erros automaticamente, como por exemplo, erros de formatação.
+Use os _warnings_ para encontrar outros _bugs_.
 
 ## 2. Avisos (_Warnings_)
 
@@ -200,14 +188,26 @@ Isto é natural, mas significa que a sua utilização é ainda mais importante: 
 
 <!-- "Quem te avisa, teu amigo é!" -- Provérbio Popular Português -->
 
-## 3. _Makefiles_ avançados
+## 3. Formatadores de Código
 
-Como descrito no guião principal, o `make` é uma ferramenta fulcral para acelerar o desenvolvimento de código em `C`.
-Explore na directoria `extra` o `Makefile` apresentado.
-Esta diretoria tem uma versão alterada do código da BST presente em `src`.
+A formatação de código é um assunto contencioso.
+O código bem formatado é extremamente importante (a maioria do código é lido mais vezes do que é escrito) e uma formatação adequada e uniforme facilita a compreensão.
+Contudo, o que constitui _formatação adequada_ é um tópico que facilmente degenera numa discussão de gosto pessoal e distrai do objetivo principal (o desenvolvimento).
+Para além disso, é difícil e trabalhoso manter qualquer tipo de formatação de forma consistente, especialmente quando a dimensão do projeto vai aumentando.
 
-Utilize o `make` para corrigir alguns dos erros automaticamente, como por exemplo, erros de formatação.
-Use os _warnings_ para encontrar outros _bugs_.
+Para colmatar este problema, existem formatadores automáticos de código.
+Por exemplo, em Python existe o [`autopep8`](https://pypi.org/project/autopep8/), em Rust o [`rustfmt`](https://github.com/rust-lang/rustfmt) e em Go o `go fmt`.  
+Para C (e C++) existe o [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html).
+
+Para correr o `clang-format`, usar o comando:
+
+```sh
+clang-format -i <source_files>
+```
+
+Para configurar o estilo de formatação, existe o ficheiro `.clang-format`.
+O comando `clang-format` deteta a presença deste ficheiro e utiliza-o como referência.
+Nos projetos, será fornecido com o código base um ficheiro `.clang-format` para uniformizar o estilo a usar.
 
 ----
 

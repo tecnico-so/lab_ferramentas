@@ -175,7 +175,7 @@ q
 ./test < tree2.txt
 ```
 
-## 6. Utilização da ferramenta make
+## 6. Utilização da ferramenta `make`
 
 O `make` é uma ferramenta frequentemente utilizada para compilar _software_.
 Em projetos de qualquer dimensão, a utilização do `make` oferece uma forma unificada e conhecida de compilar o _software_ em questão.
@@ -255,7 +255,7 @@ Existem regras implícitas para a compilação de artefactos em C, o que é bast
 
 ## 7. Extra
 
-Se quiser exercitar mais aprofundadamente as ferramentas de compilação que vamos utilizar, explore o [guião extra](advanced_makefile.md).
+Se quiser exercitar mais aprofundadamente as ferramentas de compilação que vamos utilizar, explore o [guião extra](READMETOO.md).
 
 **NOTA IMPORTANTE:** Todas as entregas associadas à realização do projeto de SO deverão incluir os ficheiros fonte desenvolvidos e, obrigatoriamente, a correspondente `Makefile`.
 
