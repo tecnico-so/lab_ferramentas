@@ -90,7 +90,7 @@ Como regra, antes de usar uma função, deve estudar nas _manpages_  as diversas
 
 ## 3. Redireção dos canais de entrada/saída
 
-1. Em ambientes UNIX, cada processo tem três canais fundamentais de entrada/saída: `stdin´, `stdout` e `stderr`.
+1. Em ambientes UNIX, cada processo tem três canais fundamentais de entrada/saída: `stdin`, `stdout` e `stderr`.
 
 - O `stdin` (abreviatura de _standard input_) representa o dispositivo de entrada de um programa - tipicamente o teclado;
 - O `stdout` (_standard output_) representa o dispositivo de saída – tipicamente o terminal;
