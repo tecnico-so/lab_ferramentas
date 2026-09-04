@@ -50,9 +50,9 @@ test.c:3:24: warning: implicit conversion loses integer precision: 'unsigned int
 Para mais informações, leia o seguinte artigo: [_What Every Computer Scientist Should Know About Floating-Point Arithmetic_](http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 Alguns erros são impressionantes ou mesmo espetaculares.
 
-- `-Wformat=2`: analiza as _format strings_ de funções tipo `printf`, verificando que os elementos e os descriptores de formatação estão bem colocados;
+- `-Wformat=2`: analisa as _format strings_ de funções tipo `printf`, verificando que os elementos e os descriptores de formatação estão bem colocados;
 - `-Wnull-dereference`: detecta algumas instâncias de derreferências de *null pointers*;
-- `-Wshadow`: detecta quanto se está a renomear uma variável.
+- `-Wshadow`: detecta quando se está a renomear uma variável.
 
 ```c
 int f(int x) {

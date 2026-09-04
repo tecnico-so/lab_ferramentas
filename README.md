@@ -86,7 +86,7 @@ Se quiser saber, por exemplo, como escrever um `Makefile`, a _manpage_ do `make`
 
 4. O uso do manual é especialmente útil para obter informação sobre as funções do C e identificar os valores devolvidos – notar a secção `RETURN VALUE`.
 Este aspeto é muito importante, pois nenhum programa deve chamar uma função e, no retorno, ignorar se ocorreu alguma situação de erro durante a execução da função.
-Como regra, antes de usar uma função, deve estudar nas _manpages_  as diversas situações de erro que podem ocorrer e assegurar que o seu programa as trata devidamente (analisando o retorno da função).
+Como regra, antes de usar uma função, deve estudar nas _manpages_ as diversas situações de erro que podem ocorrer e assegurar que o seu programa as trata devidamente (analisando o retorno da função).
 
 ## 3. Redireção dos canais de entrada/saída
 
@@ -115,7 +115,7 @@ Durante as aulas teóricas serão descritas formas mais genéricas de redirecion
 No entanto, podem encontrar já detalhes sobre os _redirection operators_ na secção `REDIRECTION` da _manpage_ do _bash_ (`man bash`) ou [pesquisar informação na Internet](https://www.man7.org/linux/man-pages/man1/bash.1.html#REDIRECTION).
 
 3. É também possível redirecionar o `stdout` de um comando para o `stdin` de outro, criando assim uma cadeia de comandos para processar informação.
-Por exemplo, a seguinte cadeia de comandos lê o conteúdo do ficheiro `/etc/passwd`, filtra as linhas que contenham a palavra ´root` e imprime a 7ª coluna (colunas separadas pelo caracter ‘:’) de cada linha:
+Por exemplo, a seguinte cadeia de comandos lê o conteúdo do ficheiro `/etc/passwd`, filtra as linhas que contenham a palavra `root` e imprime a 7ª coluna (colunas separadas pelo caracter ‘:’) de cada linha:
 
 ```sh
 cat /etc/passwd | grep root | cut -d : -f 7
