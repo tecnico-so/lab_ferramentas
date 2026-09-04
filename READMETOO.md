@@ -1,31 +1,31 @@
 # Guião extra sobre ferramentas de desenvolvimento avançadas
 
-Este guião contém exercícios extra para que se familiarizem com ferramentas de compilação de C.
+Este guião contém exercícios extra para se familiarizar mais com as ferramentas de compilação de C.
 
-## 1. _Makefiles_ avançados
+## 1. *Makefiles* avançados
 
 Como descrito no guião principal, o `make` é uma ferramenta fulcral para acelerar o desenvolvimento de código em `C`.
-Explore na directoria [`extra`](extra/) o `Makefile` apresentado.
+Explore na diretoria [`extra`](extra/) o `Makefile` apresentado.
 Esta diretoria tem uma versão alterada do código da BST presente em [`src`](src/).
 
 Utilize o `make` para corrigir alguns dos erros automaticamente, como por exemplo, erros de formatação.
-Use os _warnings_ para encontrar outros _bugs_.
+Use os *warnings* para encontrar outros *bugs*.
 
-## 2. Avisos (_Warnings_)
+## 2. Avisos (*Warnings*)
 
-Como já devem ter experiência noutras cadeiras, o `C` é uma linguagem onde é fácil cometer erros de programação difíceis de compreender.
-Há vários _pitfalls_, desde erros de memória (_double-free_, _memory-leaks_, _use-after-free_) a conversões implícitas.
+Como já deve ter experiência noutras disciplinas, o `C` é uma linguagem onde é fácil cometer erros de programação difíceis de compreender.
+Há vários *pitfalls*, desde erros de memória (*double-free*, *memory-leaks*, *use-after-free*) a conversões implícitas.
 Para além de impedirem a execução correta dos programas, podem causar vulnerabilidades de segurança.
 Para os evitar, é preciso assumir um estilo de programação bastante rígido, consistente e defensivo.
-Contudo, para auxiliar neste esforço, o compilador tem um conjunto de _warnings_, que avisam quando certos padrões de programação menos corretos (ou mesmo completamente incorretos) são usados.
+Contudo, para auxiliar neste esforço, o compilador tem um conjunto de *warnings*, que avisam quando certos padrões de programação menos corretos (ou mesmo completamente incorretos) são usados.
 
-Estes _warnings_ têm de ser ativados explicitamente.
-Com a _flag_ `-Werror`, eles são elevados a erros, ou seja, o compilador interrompe a compilação até o erro ser corrigido.
-Seguem-se alguns exemplos de _flags_ que podem ser usadas:
+Estes *warnings* têm de ser ativados explicitamente.
+Com a *flag* `-Werror`, eles são elevados a erros, ou seja, o compilador interrompe a compilação até o erro ser corrigido.
+Seguem-se alguns exemplos de *flags* que podem ser usadas:
 
-- `-Wall`: ativa a maioria dos _warnings_ (ao contrário do que o nome indica, não são todos);
-- `-Wextra`: ativa mais _warnings_ (continuam sem ser todos);
-- `-Wcast-align`: quando é feito um _cast_ que altera os requisitos de alinhamento;
+- `-Wall`: ativa a maioria dos *warnings* (ao contrário do que o nome indica, não são todos);
+- `-Wextra`: ativa mais *warnings* (continuam sem ser todos);
+- `-Wcast-align`: quando é feito um *cast* que altera os requisitos de alinhamento;
 - `-Wconversion`: quando uma conversão pode alterar um valor.
 
 ```c
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-Compilar com `clang -Wconversion test.c` emite um _warning_ com:
+Compilar com `clang -Wconversion test.c` emite um *warning* com:
 
 ```sh
 % clang -Wconversion test.c
@@ -46,13 +46,13 @@ test.c:3:24: warning: implicit conversion loses integer precision: 'unsigned int
 1 warning generated.
 ```
 
-- `-Wfloat-equal`: comparar números de vírgula flutuante (_floating point_) para testar a igualdade pode dar resultados diferentes do esperado.
-Para mais informações, leia o seguinte artigo: [_What Every Computer Scientist Should Know About Floating-Point Arithmetic_](http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
+- `-Wfloat-equal`: comparar números de vírgula flutuante (*floating point*) para testar a igualdade pode dar resultados diferentes do esperado.
+Para mais informações, leia o seguinte artigo: [*What Every Computer Scientist Should Know About Floating-Point Arithmetic*](http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 Alguns erros são impressionantes ou mesmo espetaculares.
 
-- `-Wformat=2`: analisa as _format strings_ de funções tipo `printf`, verificando que os elementos e os descriptores de formatação estão bem colocados;
-- `-Wnull-dereference`: detecta algumas instâncias de derreferências de *null pointers*;
-- `-Wshadow`: detecta quando se está a renomear uma variável.
+- `-Wformat=2`: analisa as *format strings* de funções tipo `printf`, verificando que os elementos e os descriptores de formatação estão bem colocados;
+- `-Wnull-dereference`: deteta algumas instâncias de derreferências de *null pointers*;
+- `-Wshadow`: deteta quando uma nova declaração esconde outra variável no mesmo âmbito.
 
 ```c
 int f(int x) {
@@ -127,7 +127,7 @@ test.c:9:13: warning: enumeration value 'STUDY' not handled in switch [-Wswitch]
 1 warning generated.
 ```
 
-- `-Wundef`: avisa quando um valor usado numa _macro_ não está definido;
+- `-Wundef`: avisa quando um valor usado numa *macro* não está definido;
 - `-Wunreachable-code`: avisa quando há código que não é atingível.
 Por exemplo:
 
@@ -148,7 +148,7 @@ int main() {
 }
 ```
 
-Compilar com `clang -Wunreachable-code test.c` emite um _warning_ com:
+Compilar com `clang -Wunreachable-code test.c` emite um *warning* com:
 
 ```sh
 % clang -Wunreachable-code test.c
@@ -192,7 +192,7 @@ Isto é natural, mas significa que a sua utilização é ainda mais importante: 
 
 A formatação de código é um assunto contencioso.
 O código bem formatado é extremamente importante (a maioria do código é lido mais vezes do que é escrito) e uma formatação adequada e uniforme facilita a compreensão.
-Contudo, o que constitui _formatação adequada_ é um tópico que facilmente degenera numa discussão de gosto pessoal e distrai do objetivo principal (o desenvolvimento).
+Contudo, o que constitui formatação adequada é um tópico que facilmente degenera numa discussão de gosto pessoal e distrai do objetivo principal (o desenvolvimento).
 Para além disso, é difícil e trabalhoso manter qualquer tipo de formatação de forma consistente, especialmente quando a dimensão do projeto vai aumentando.
 
 Para colmatar este problema, existem formatadores automáticos de código.
