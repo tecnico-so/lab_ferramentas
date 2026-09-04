@@ -120,7 +120,7 @@ int main() {
 Compilar com `clang -Wswitch-enum test.c` emite um aviso com:
 
 ```sh
-% clang test.c
+% clang -Wswitch-enum test.c
 test.c:9:13: warning: enumeration value 'STUDY' not handled in switch [-Wswitch]
     switch (status) {
             ^
