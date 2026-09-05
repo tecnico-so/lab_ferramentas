@@ -127,7 +127,7 @@ Estas redireções são feitas com recurso a *pipes*, conceito que será abordad
 
 ## 4. Análise do programa fornecido
 
-Analise os ficheiros presentes na diretoria `src` usando o editor de texto da sua preferência (por exemplo, `nano`, vim`, `emacs`).
+Analise os ficheiros presentes na diretoria `src` usando o editor de texto da sua preferência (por exemplo, `nano`, `vim`, `emacs`, `code`).
 
 A diretoria contém os ficheiros `bst.c` e `bst.h` que implementam uma árvore de procura binária (*Binary Search Tree* – BST).
 Os elementos da árvore são representados por uma estrutura de dados que está declarada em `bst.h`.
